@@ -1,0 +1,56 @@
+{
+  "name": "angular-material-starter",
+  "private": true,
+  "version": "0.1.0-SNAPSHOT",
+  "description": "Angular Material Starter",
+  "author": "Fernando Cruz",
+  "license": "ISC",
+
+  "peerDependencies": {
+    "angular": "@>=1.3 <1.6",
+    "angular-animate": "^@>=1.3 <1.6",
+    "angular-aria": "@>=1.3 <1.6",
+    "angular-messages": "@>=1.3 <1.6"
+  },
+
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-material": "^1.1.1"
+  },
+
+  "devDependencies": {
+    "pug-cli": "1.0.0-alpha6",
+    "stylus": "^0.54.5",
+    "babel-cli": "^6.14.0",
+    "watch": "latest",
+    "live-server": "^0.9.1"
+  },
+
+  "scripts": {
+    "postinstall": "bower update && rm -rf dist && mkdir dist",
+
+    "clean": "rm -rf dist && mkdir dist",
+
+    "compileassets": "cp -R src/assets dist",
+
+    "pughelp": "pug --help",
+    "compilehtml": "pug src --out ./dist",
+
+    "stylushelp": "stylus --help",
+    "compilecss": "stylus --out dist src",
+
+    "babelhelp": "babel --help",
+    "compilejs": "babel --out-dir dist src",
+
+    "prebuild": "npm run clean",
+    "build": "npm run compileassets && npm run compilecss && npm run compilehtml && npm run compilejs",
+
+    "buildwatch": "watch 'npm run build' src",
+
+    "prestart": "npm update && npm run build",
+    "start": "live-server --open=dist"
+  }
+}

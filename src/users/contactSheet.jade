@@ -1,0 +1,10 @@
+md-bottom-sheet.md-list.md-has-header
+  md-subheader
+    | Contact
+    span.name {{ vm.user.name }}:
+
+  md-list
+    md-list-item(ng-repeat='item in vm.items')
+      md-button(ng-click='vm.contactUser(item)')
+        md-icon(md-svg-icon='{{ item.icon_url }}')
+        | {{item.name}}
