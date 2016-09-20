@@ -30,7 +30,7 @@
   },
 
   "scripts": {
-    "postinstall": "bower update && rm -rf dist && mkdir dist",
+    "postinstall": "rm -rf dist && mkdir dist",
 
     "clean": "rm -rf dist && mkdir dist",
 
