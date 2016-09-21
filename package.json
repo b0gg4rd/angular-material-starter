@@ -37,7 +37,7 @@
     "compileassets": "cp -R src/assets dist",
 
     "pughelp": "pug --help",
-    "compilehtml": "pug src --out ./dist",
+    "compilehtml": "pug --out ./dist src",
 
     "stylushelp": "stylus --help",
     "compilecss": "stylus --out dist src",
@@ -51,6 +51,6 @@
     "buildwatch": "watch 'npm run build' src",
 
     "prestart": "npm update && npm run build",
-    "start": "live-server --open=dist"
+    "start": "live-server --mount=/:dist"
   }
 }
