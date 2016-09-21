@@ -34,21 +34,21 @@
 
     "clean": "rm -rf dist && mkdir dist",
 
-    "compileassets": "cp -R src/assets dist",
+    "compile:assets": "cp -R src/assets dist",
 
-    "pughelp": "pug --help",
-    "compilehtml": "pug --out ./dist src",
+    "pug:help": "pug --help",
+    "compile:html": "pug --out ./dist src",
 
-    "stylushelp": "stylus --help",
-    "compilecss": "stylus --out dist src",
+    "stylus:help": "stylus --help",
+    "compile:css": "stylus --out dist src",
 
-    "babelhelp": "babel --help",
-    "compilejs": "babel --out-dir dist src",
+    "babel:help": "babel --help",
+    "compile:js": "babel --out-dir dist src",
 
     "prebuild": "npm run clean",
-    "build": "npm run compileassets && npm run compilecss && npm run compilehtml && npm run compilejs",
+    "build": "npm run compile:assets && npm run compile:css && npm run compile:html && npm run compile:js",
 
-    "buildwatch": "watch 'npm run build' src",
+    "build:watch": "watch 'npm run build' src",
 
     "prestart": "npm update && npm run build",
     "start": "live-server --mount=/:dist"
