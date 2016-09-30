@@ -37,7 +37,7 @@
     "compile:assets": "cp -R src/assets dist",
 
     "pug:help": "pug --help",
-    "compile:html": "pug --out ./dist src",
+    "compile:html": "pug --out dist src",
 
     "stylus:help": "stylus --help",
     "compile:css": "stylus --out dist src",
